@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('Public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
