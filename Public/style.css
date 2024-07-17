@@ -204,6 +204,7 @@ main{
 }
 
 
+
 .err{
     color: red;
     font-size: 1rem;
@@ -234,6 +235,10 @@ main{
     align-items: center;
     border-radius: 10px;
 
+}
+
+.icons a{
+    cursor: pointer;
 }
 
 .icon ion-icon{
