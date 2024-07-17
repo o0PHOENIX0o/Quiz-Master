@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/twemoji.min.css">
+</head> 
+<body onload="getCountry()">
+   <header>
+    <div class="Header">
+        
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+            <h1>Quiz Master</h1>
+        </div>
+        <div class="links">
+            <ul>
+                <li id="worldQuiz" class="active">World Quiz</li>
+                <li id="flagQuiz">Flag Quiz</li>
+                <li>Quiz 3</li>
+                <li>Quiz 4</li>
+            </ul>
+        </div>
+    </div>
+   </header>
+
+   <main>
+    <div class="mainContainer" id="worldContainer" style="display: flex;">
+        <div class="quizTitle">
+            <img src="images/globe.png" alt="">
+            <h2>World Quiz</h2>
+        </div> 
+        <p>Guess the Capital</p><hr style="width: 100%;">
+    
+        <div class="score"><h3>total score: <span id="Cscore"></span></h3></div>
+    
+        <div class="country"><h2></h2></div>
+
+        <div class="formContainer">
+            <input type="text" name="Capital" placeholder="Enter the Capital" onkeypress="enterEvent(event)" required autofocus  >
+        </div>
+
+        <div class="err"></div>
+
+        <div class="submit" onclick="checkCapital(event)">Submit</div>
+        
+    </div>
+
+    <div class="mainContainer" id="FlagContainer" >
+        <div class="quizTitle">
+            <img src="images/flag.png" alt="">
+            <h2>Flag Quiz</h2>
+        </div> 
+        <p>Guess the Country</p><hr style="width: 100%;">
+    
+        <div class="score"><h3>total score: <span id="Fscore"></span></h3></div>
+    
+        <div class="flag">
+            <span id="flag"></span>
+        </div>
+
+        <div class="formContainer">
+            <input type="text" name="Country" placeholder="Enter the Country name" onkeypress="enterEvent(event)" required autofocus>
+        </div>
+        <div class="err"></div>
+        <div class="submit" onclick="CheckCountry(event)">Submit</div>
+        
+    </div>
+
+
+   </main>
+
+   <footer>
+    <div class="footer_container">
+        <div class="Copyright">
+            <p>Copyright © 2024</p>
+        </div>
+        <div class="icons">
+            <div class="icon"><ion-icon name="logo-linkedin"></ion-icon></div>
+            <div class="icon"><ion-icon name="logo-instagram"></ion-icon></div>
+            <div class="icon"><ion-icon name="logo-github"></ion-icon></div>
+            <div class="icon"><ion-icon name="person-circle-outline"></ion-icon></div>       
+            
+        </div>
+    </div>
+   </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
